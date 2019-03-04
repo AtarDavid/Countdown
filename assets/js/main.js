@@ -22,7 +22,7 @@ class timer {
 
     printOutput() {
         console.log(this.currentTime)
-
+        this.container.innerHTML = this.currentTime
     }
 }
 
