@@ -1,8 +1,16 @@
 class timer {
     constructor(domselector, date) {
         this.container = document.querySelector(domselector)
-        this.endDate = moment(date, "DD.MM.YYYY").format('DD.MM.YYYY, h:mm:ss a')
-        this.currentTime = null
+        this.endDate = moment(date, "DD.MM.YYYY")
+        this.currentTime = moment()
+        this.duration = this.endDate - this.currentTime
+
+        this.counter = {
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0
+        }
 
         this.update()
 
@@ -25,5 +33,4 @@ class timer {
         this.container.innerHTML = this.currentTime
     }
 }
-
 const countDown = new timer('#output', '14.03.2019')
