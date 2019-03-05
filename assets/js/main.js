@@ -35,9 +35,18 @@ class timer {
         this.counter.seconds = this.duration.seconds()
     }
 
+    template() {
+        const { days, hours, minutes, seconds } = this.counter
+        return `
+          <span class="days">${days}</span> Days :
+          <span class="hours">${hours}</span> Hours :
+          <span class="minutes">${minutes}</span> Minutes :
+          <span class="seconds">${seconds}</span> Seconds
+        `
+    }
+
     printOutput() {
-        console.log(this.currentTime)
-        this.container.innerHTML = this.currentTime
+        this.container.innerHTML = this.template()
     }
 }
 
