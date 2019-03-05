@@ -25,7 +25,14 @@ class timer {
     }
 
     getTime() {
-        this.currentTime = moment().format('DD.MM.YYYY, h:mm:ss a')
+        this.duration = moment.duration(
+            this.duration - 1000,
+            "milliseconds"
+        )
+        this.counter.days = Math.floor(this.duration._milliseconds / 24 / 3600 / 1000)
+        this.counter.hours = this.duration.hours()
+        this.counter.minutes = this.duration.minutes()
+        this.counter.seconds = this.duration.seconds()
     }
 
     printOutput() {
@@ -33,4 +40,5 @@ class timer {
         this.container.innerHTML = this.currentTime
     }
 }
+
 const countDown = new timer('#output', '14.03.2019')
