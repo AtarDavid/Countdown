@@ -50,4 +50,4 @@ class timer {
     }
 }
 
-const countDown = new timer('#output', '14.03.2019')
+const countDown = new timer('#output', '01.05.2019')
