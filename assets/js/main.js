@@ -23,7 +23,7 @@ class timer {
         let clock = setInterval(
             () => {
                 if (this.duration > 1000) {
-                    this.getTime();
+                    this.count();
                 } else {
                     clearInterval(clock)
                     this.stop()
@@ -34,7 +34,7 @@ class timer {
             }, 1000)
     }
 
-    getTime() {
+    count() {
         this.duration = moment.duration(
             this.duration - 1000,
             "milliseconds"
