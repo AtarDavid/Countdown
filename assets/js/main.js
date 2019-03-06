@@ -1,7 +1,7 @@
 class timer {
     constructor(domselector, date) {
         this.container = this.ele(domselector)
-        this.endDate = moment(date, "DD.MM.YYYY")
+        this.endDate = moment(date, "DD.MM.YYYY hh:mm")
         this.currentTime = moment()
         this.duration = this.endDate - this.currentTime
 
@@ -20,9 +20,16 @@ class timer {
     }
 
     update() {
-        setInterval(
+        let clock = setInterval(
             () => {
-                this.getTime();
+                if (this.duration > 1000) {
+                    this.getTime();
+                } else {
+                    clearInterval(clock)
+                    this.stop()
+                }
+
+                // Happens in every round
                 this.printOutput();
             }, 1000)
     }
@@ -36,6 +43,13 @@ class timer {
         this.counter.hours = this.duration.hours()
         this.counter.minutes = this.duration.minutes()
         this.counter.seconds = this.duration.seconds()
+    }
+
+    stop() {
+        this.counter.days = 0
+        this.counter.hours = 0
+        this.counter.minutes = 0
+        this.counter.seconds = 0
     }
 
     template() {
@@ -65,4 +79,4 @@ class timer {
     }
 }
 
-const countDown = new timer('#output', '01.05.2019')
+const countDown = new timer('#output', '01.05.2019 00:00')
