@@ -1,6 +1,6 @@
 class timer {
     constructor(domselector, date) {
-        this.container = document.querySelector(domselector)
+        this.container = this.ele(domselector)
         this.endDate = moment(date, "DD.MM.YYYY")
         this.currentTime = moment()
         this.duration = this.endDate - this.currentTime
@@ -13,7 +13,10 @@ class timer {
         }
 
         this.update()
+    }
 
+    ele(element) {
+        return document.querySelector(element)
     }
 
     update() {
@@ -38,15 +41,28 @@ class timer {
     template() {
         const { days, hours, minutes, seconds } = this.counter
         return `
-          <span class="days">${days}</span> Days :
-          <span class="hours">${hours}</span> Hours :
-          <span class="minutes">${minutes}</span> Minutes :
-          <span class="seconds">${seconds}</span> Seconds
+        <div class="output">
+        <h3>Days</h3>
+        <div id="days">${days}</div>
+    </div>
+    <div class="output">
+        <h3>Hours</h3>
+        <div id="hours">${hours}</div>
+    </div>
+    <div class="output">
+        <h3>Minutes</h3>
+        <div id="minutes">${minutes}</div>
+    </div>
+    <div class="output">
+        <h3>Seconds</h3>
+        <div id="seconds">${seconds}</div>
+    </div>
         `
     }
 
     printOutput() {
-        this.container.innerHTML = this.template()
+        //    this.container.innerHTML = this.template()
+        document.querySelector('#output').innerHTML = this.template()
     }
 }
 
