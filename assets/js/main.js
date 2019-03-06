@@ -27,6 +27,7 @@ class timer {
                 } else {
                     clearInterval(clock)
                     this.stop()
+                    this.magic()
                 }
 
                 // Happens in every round
@@ -50,6 +51,18 @@ class timer {
         this.counter.hours = 0
         this.counter.minutes = 0
         this.counter.seconds = 0
+
+    }
+
+    magic() {
+        document.querySelector('h1').innerHTML = "It's time!"
+        setTimeout(() => {
+            document.querySelector('h1').innerHTML = "Are you excited?!"
+        }, 3000);
+        setTimeout(() => {
+            document.querySelector('#overlay').style.display = 'block'
+            document.querySelector('.wrap').innerHTML = ""
+        }, 6000);
     }
 
     template() {
