@@ -4,6 +4,7 @@ class timer {
         this.endDate = moment(date, "DD.MM.YYYY hh:mm")
         this.currentTime = moment()
         this.duration = this.endDate - this.currentTime
+        this.interval = 1000
 
         this.counter = {
             days: 0,
@@ -22,7 +23,7 @@ class timer {
     update() {
         let clock = setInterval(
             () => {
-                if (this.duration > 1000) {
+                if (this.duration > this.interval) {
                     this.count();
                 } else {
                     clearInterval(clock)
@@ -32,12 +33,12 @@ class timer {
 
                 // Happens in every round
                 this.printOutput();
-            }, 1000)
+            }, this.interval)
     }
 
     count() {
         this.duration = moment.duration(
-            this.duration - 1000,
+            this.duration - this.interval,
             "milliseconds"
         )
         this.counter.days = Math.floor(this.duration._milliseconds / 24 / 3600 / 1000)
