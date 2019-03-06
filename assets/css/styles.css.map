@@ -2,11 +2,15 @@
 	"version": 3,
 	"file": "styles.css",
 	"sources": [
-		"../scss/styles.scss"
+		"../scss/styles.scss",
+		"../scss/partials/_reset.scss",
+		"../scss/partials/_layout.scss"
 	],
 	"sourcesContent": [
-		"* {\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nbody{\n    height: 100vh;\n    width: 100%;\n}\n\n.wrap{\n    height: 100%;\n    width: 100%;\n    background-image: url(\"../img/background.jpg\");\n    background-position: center;\n    background-size: cover;\n}\n\n#output{\n    width: 100%;\n    display: flex;\n    flex-flow: column nowrap;\n    justify-content: space-evenly;\n    @media screen and (min-width: 480px) {\n        flex-direction: row;\n    }\n}\n\n.output{\n    display: flex;\n    flex-direction: row-reverse;\n    justify-content: space-around;\n    align-items: baseline;\n    background-color: white;\n    flex: 1 0 25%;\n    padding: 10px;\n    @media screen and (min-width: 480px) {\n    flex-direction: column;\n}\n}"
+		"@import \"./partials/reset\";\n@import \"./partials/layout\";",
+		"* {\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}",
+		"body{\n    height: 100vh;\n    width: 100%;\n}\n\n.wrap{\n    height: 100%;\n    width: 100%;\n    background-image: url(\"../img/background.jpg\");\n    background-position: center;\n    background-size: cover;\n}\n\n#output{\n    width: 100%;\n    display: flex;\n    flex-flow: column nowrap;\n    justify-content: space-evenly;\n    @media screen and (min-width: 480px) {\n        flex-direction: row;\n    }\n}\n\n.output{\n    display: flex;\n    flex-direction: row-reverse;\n    justify-content: space-around;\n    align-items: baseline;\n    background-color: white;\n    flex: 1 0 25%;\n    padding: 10px;\n    @media screen and (min-width: 480px) {\n    flex-direction: column;\n}\n}"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,CAAC,CAAC;EACE,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU,GACzB;;AAED,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI,GACd;;AAED,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,4BAA4B;EAC9C,mBAAmB,EAAE,MAAM;EAC3B,eAAe,EAAE,KAAK,GACzB;;AAED,AAAA,OAAO,CAAA;EACH,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,eAAe,EAAE,YAAY,GAIhC;EAHG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;IALvC,AAAA,OAAO,CAAA;MAMC,cAAc,EAAE,GAAG,GAE1B;;AAED,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,WAAW;EAC3B,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,QAAQ;EACrB,gBAAgB,EAAE,KAAK;EACvB,IAAI,EAAE,OAAO;EACb,OAAO,EAAE,IAAI,GAIhB;EAHG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;IARvC,AAAA,OAAO,CAAA;MASH,cAAc,EAAE,MAAM,GAEzB"
+	"mappings": "ACAA,AAAA,CAAC,CAAC;EACE,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU,GACzB;;ACRD,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI,GACd;;AAED,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,4BAA4B;EAC9C,mBAAmB,EAAE,MAAM;EAC3B,eAAe,EAAE,KAAK,GACzB;;AAED,AAAA,OAAO,CAAA;EACH,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,eAAe,EAAE,YAAY,GAIhC;EAHG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;IALvC,AAAA,OAAO,CAAA;MAMC,cAAc,EAAE,GAAG,GAE1B;;AAED,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,WAAW;EAC3B,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,QAAQ;EACrB,gBAAgB,EAAE,KAAK;EACvB,IAAI,EAAE,OAAO;EACb,OAAO,EAAE,IAAI,GAIhB;EAHG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;IARvC,AAAA,OAAO,CAAA;MASH,cAAc,EAAE,MAAM,GAEzB"
 }
