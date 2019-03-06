@@ -61,8 +61,7 @@ class timer {
     }
 
     printOutput() {
-        //    this.container.innerHTML = this.template()
-        document.querySelector('#output').innerHTML = this.template()
+        this.container.innerHTML = this.template()
     }
 }
 
