@@ -3,6 +3,14 @@ body{
     width: 100%;
 }
 
+#overlay {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .wrap{
     height: 100%;
     width: 100%;
