@@ -11,7 +11,14 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: red;
+}
+
+.wrap{
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #output{
