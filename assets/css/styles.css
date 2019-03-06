@@ -22,15 +22,15 @@ span {
   text-align: right; }
 
 * {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100vh;
   width: 100%; }
 
@@ -49,13 +49,17 @@ body {
   background-size: cover; }
 
 #output {
+  position: absolute;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  bottom: 30px; }
   @media screen and (min-width: 480px) {
     #output {
-      flex-direction: row; } }
+      flex-direction: row;
+      top: 170px;
+      bottom: unset; } }
 
 .output {
   display: flex;
