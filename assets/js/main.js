@@ -42,19 +42,19 @@ class timer {
         const { days, hours, minutes, seconds } = this.counter
         return `
         <div class="output">
-        <h3>Days</h3>
+        <span>Days</span>
         <div id="days">${days}</div>
     </div>
     <div class="output">
-        <h3>Hours</h3>
+        <span>Hours</span>
         <div id="hours">${hours}</div>
     </div>
     <div class="output">
-        <h3>Minutes</h3>
+        <span>Minutes</span>
         <div id="minutes">${minutes}</div>
     </div>
     <div class="output">
-        <h3>Seconds</h3>
+        <span>Seconds</span>
         <div id="seconds">${seconds}</div>
     </div>
         `
