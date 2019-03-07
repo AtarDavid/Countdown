@@ -56,6 +56,15 @@ body {
   background-position: center;
   background-size: cover; }
 
+@media screen and (max-width: 480px) {
+  .initBlank > * {
+    color: rgba(255, 255, 255, 0);
+    text-shadow: none; } }
+
+#blank {
+  color: rgba(255, 255, 255, 0);
+  text-shadow: none; }
+
 #overlay {
   display: none;
   position: absolute;

@@ -10,6 +10,17 @@ body{
     background-size: cover;
 }
 
+.initBlank > * {
+    @media screen and (max-width: 480px) {
+        color:rgba(255, 255, 255, 0);
+        text-shadow: none;    }
+}
+
+#blank {
+    color:rgba(255, 255, 255, 0);
+    text-shadow: none;
+}
+
 #overlay {
     display: none;
     position: absolute;
