@@ -69,19 +69,19 @@ class timer {
     template() {
         const { days, hours, minutes, seconds } = this.counter
         return `
-        <div class="output">
+        <div class="timeOutput">
         <span>Days</span>
         <div id="days">${days}</div>
     </div>
-    <div class="output">
+    <div class="timeOutput">
         <span>Hours</span>
         <div id="hours">${hours}</div>
     </div>
-    <div class="output">
+    <div class="timeOutput">
         <span>Minutes</span>
         <div id="minutes">${minutes}</div>
     </div>
-    <div class="output">
+    <div class="timeOutput">
         <span>Seconds</span>
         <div id="seconds">${seconds}</div>
     </div>
