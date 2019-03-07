@@ -14,6 +14,7 @@ class timer {
         }
 
         this.update()
+        this.printOutput()
     }
 
     ele(element) {
