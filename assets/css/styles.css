@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald:300,400");
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif; }
+
+main {
+  font-weight: 400;
   font-size: 36px;
   color: #5d4d4d;
   text-shadow: 0px 0px 20px white; }
@@ -24,6 +27,12 @@ span {
   @media screen and (min-width: 480px) {
     .timeOutput > div {
       font-size: 72px; } }
+
+footer {
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0px 0px 20px black; }
 
 * {
   margin: 0;
@@ -54,7 +63,7 @@ body {
   max-width: 1170px;
   margin: auto; }
 
-#output {
+main {
   position: absolute;
   width: 100%;
   max-width: 1170px;
@@ -63,7 +72,7 @@ body {
   justify-content: space-between;
   bottom: 30px; }
   @media screen and (min-width: 480px) {
-    #output {
+    main {
       flex-direction: row;
       top: 170px;
       bottom: unset; } }
@@ -82,5 +91,20 @@ body {
     .timeOutput {
       flex-direction: column;
       align-items: center; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px; }
+  @media screen and (min-width: 480px) {
+    footer {
+      padding: 10px; } }
+
+li {
+  display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */

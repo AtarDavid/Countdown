@@ -1,5 +1,9 @@
-body{
+body {
     font-family: 'Oswald', sans-serif;
+}
+
+main {
+    font-weight: 400;
     font-size: 36px;
     color: #5d4d4d;
     text-shadow: 0px 0px 20px white;
@@ -26,4 +30,11 @@ text-align: right;
 @media screen and (min-width: 480px) {
     font-size: 72px;
 }
+}
+
+footer {
+font-size: 14px;
+font-weight: 300;
+color: white;
+    text-shadow: 0px 0px 20px black;
 }
