@@ -1,0 +1,46 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+main {
+    font-weight: 400;
+    font-size: 36px;
+    color: #5d4d4d;
+    text-shadow: 0px 0px 20px white;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 96px;
+    line-height: 96px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    text-align: center;
+    padding: 10px 0;
+    @media screen and (max-height: 600px) {
+        font-size: 72px;
+        line-height: 72px;
+        padding: 2px;
+    }
+}
+
+span{
+    padding: 5px;
+    flex: 4;
+}
+
+.timeOutput > div {
+padding: 5px;
+flex: 3;
+text-align: right;
+@media screen and (min-width: 480px) {
+    font-size: 72px;
+}
+}
+
+footer {
+font-size: 14px;
+font-weight: 300;
+color: white;
+    text-shadow: 0px 0px 20px black;
+}
