@@ -1,3 +1,6 @@
+import "../scss/styles.scss"
+import "../img/background.jpg"
+
 var moment = require('moment');
 
 class timer {
